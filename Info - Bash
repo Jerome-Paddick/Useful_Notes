@@ -1,6 +1,9 @@
 Terminal
-.VZ!2B
+
 man bash
+
+Show ram/CPU status
+top
 
 export 	-> exports var or func of all child processes in current shell
 source 	-> loads any function file into current shell 

@@ -1,20 +1,57 @@
 FLASK
 
-cvapi
+//////// CVAPI ////////
 
 source VirtualEnvs/cvapi/bin/activate
 
-General
+
+//////// GENERAL ////////
 
 Flask Templates
 "Ginger" Framework
 
 All Flask apps create an "Application Instance" -> an object to which all requests are sent for handling using WSGI (Web Server Gateway Interface) protocol
 
+WSGI -> server/gateway side, and application/framework side, WSGI middle-ware
+	WSGI middleware python callable that is converted into a generator
+
+Generator -> Function that behaves like an iterator (can be iterated upon)
+
 Only requirement for Flask class creator is name of module or package, for most instances it is pythons __name__ variable, used to determine root path of the application
  -> flask = app(__name__)
 
-decorator adjust the operation of a function
-decorator can turn function into listener
+
+//////// ROUTES AND VIEWS ////////
+
+client request -> web server -> Flask application Instance -> handled and passed to handler function
+FAI Response -> client
+
+FAI keeps a mapping of URLs to python functions, mostly through @app.route("/") decorator
+decorator adjust the behaviour of a function
+decorator can register functions as handlers for an event
+
+@app.route("/")
+def index():
+	return "<h1> HEllo <h1>"
+
+the @app.route decorator registers the index() function as the handler for the root url, the return of the function is the response
+
+index() -> VIEW Function
+
+variables can be used in the route decorator -> 
+@app.route("/<name>")
+def index(name):
+	return "<h1> Hello %s <h1>" %name
+
+Types
+eg. @app.route("/<int:id>")  will only match URLs with int
+int, float, path (string with slashes)
+
+
+//////// Server Startup ////////
+
+FAI instance has a run method to launch server
+if __name__ == "__main__":
+	app.run(debug=True)
 
 

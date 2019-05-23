@@ -48,10 +48,18 @@ eg. @app.route("/<int:id>")  will only match URLs with int
 int, float, path (string with slashes)
 
 
-//////// Server Startup ////////
+//////// SERVER-STARTUP ////////
 
 FAI instance has a run method to launch server
 if __name__ == "__main__":
 	app.run(debug=True)
+
+the __name__ == "__main__" syntax ensures code only runs when code is called directly (instead of eg. file import)
+
+server loops and acts as a listener for requests
+debug -> activated debugger and reloader
+
+//////// REQUEST-RESPONSE Context ////////
+
 
 

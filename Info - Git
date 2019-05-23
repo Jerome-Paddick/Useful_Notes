@@ -26,3 +26,12 @@ check
 git config -l
 change
 git config remote.origin.url git@github.com:your_username/your_project.git
+
+/// PUSH ///
+
+before a push, the file needs to be added and then committed
+git add .
+git commmit -c "update"
+git push
+
+

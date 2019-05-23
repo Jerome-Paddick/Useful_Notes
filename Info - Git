@@ -1,3 +1,28 @@
 GIT
 
-git init
+cd /path/to/your/existing/code
+
+git init 
+git add .
+git commit -m "REPO"
+[create new project on github]
+git remote add <remote_name> <remote_repo_url>
+git push origin master
+
+/// DOWNSTREAM/UPSTREAM ///
+
+you pull from upstream and then push back to it 
+
+set upstream: 
+git push --set-upstream origin master
+
+
+move to another branch with:
+git checkout [Branch]
+
+/// AutoLogin ///
+
+check 
+git config -l
+change
+git config remote.origin.url git@github.com:your_username/your_project.git

@@ -62,4 +62,17 @@ debug -> activated debugger and reloader
 //////// REQUEST-RESPONSE Context ////////
 
 
+FIA recieves request -> makes objects available for handlers
+request object -> encapsulates request object HTTP request from client
+
+Instead of passing these objects to every possible handler as arguments
+Flask uses CONTEXTS to make objects temporarily GLOBAL
+Flask can make an object GLOBALLY available to a THREAD without making it available to other threads
+
+from flask import request
+@app.route("/")
+def index():
+	user_agent = request.headers.get("User-Agent")  # 
+	return "<p>Your Browser is %s<p>" % user_agent
+
 

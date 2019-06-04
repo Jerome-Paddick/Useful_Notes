@@ -66,13 +66,48 @@ FIA recieves request -> makes objects available for handlers
 request object -> encapsulates request object HTTP request from client
 
 Instead of passing these objects to every possible handler as arguments
-Flask uses CONTEXTS to make objects temporarily GLOBAL
-Flask can make an object GLOBALLY available to a THREAD without making it available to other threads
+Flask CONTEXTS can make an object GLOBALLY available to a THREAD without making it available to other threads
 
 from flask import request
 @app.route("/")
 def index():
 	user_agent = request.headers.get("User-Agent")  # 
 	return "<p>Your Browser is %s<p>" % user_agent
+
+request is used as if it was a global variable, which is impossible as a multithreaded server is running multiple requests simultaneously.
+
+A thread is the smallest sequence of instructions that can be managed independantly 
+--> multithreaded servers start a pool of threads and select a thread from the pool for each incoming request
+
+CONTEXTS -> 2 contexts 
+1. Apllication Context
+	current_app -> 	Application Instance
+	g -> 		object that the application uses for temporary storage
+2. Request Context
+	request ->	HTTP request object sent by client
+	session -> 	user session dictionary
+			can be used to store values that are "remembered" between requests
+
+Flask activates (or pushes) the application and request contexts before dispatching a request and then removes them when the requedst is handled
+
+When application context is pushed
+-> current_app & g made available to thread
+when request context is pushed
+-> request & session made available to thread
+
+PUSHING A CONTEXT:
+
+from hello import app
+from flask import current_app
+
+# calling current_app.name  at this point will fail as it outside app instance
+
+app_ctx = app.app_context()
+app_ctx.push()
+current_app.name
+>> "Hello"
+
+//////// REQUEST DISPATCHING ////////
+
 
 

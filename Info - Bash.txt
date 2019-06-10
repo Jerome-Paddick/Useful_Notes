@@ -1,5 +1,14 @@
 Terminal
 
+///////// ADD Command to BASH /////////////
+
+~/.bin
+.profile -> export PATH=$PATH:/home/jerome/bin
+touch [filename]
+chmod u+x [filename]
+
+////////MISK/////////////
+
 man bash
 
 Show ram/CPU status

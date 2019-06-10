@@ -1,5 +1,11 @@
 SSH
 
+OPEN SSH TUNNEL
+
+ ssh -f hq01.cv -L 12306:db.cricviz.com:2306 -N
+
+SSH
+
 ssh jeromepaddick@hq01.cricviz.com -p 2022
 graphical
 ssh -X 

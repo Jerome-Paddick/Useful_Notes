@@ -34,4 +34,7 @@ git add .
 git commmit -c "update"
 git push
 
+/// REMOVE ///
 
+git rm file
+git rm -r folder

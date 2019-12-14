@@ -1,0 +1,23 @@
+REACT
+
+npm start
+code in src/App.js
+
+ELEMENTS
+
+- what you want to appear on screen
+- plain object desribing a component instance or DOM node and its desired properties
+- contains only information about the component type, its properites and child elements
+- immutable -> cant call any methods on it
+- description object with two fields - [ type , props ]
+
+PROPS
+
+- Arguments passed to Components via HTML attributes
+-
+
+COMPONENTS
+
+- Building blocks of App  -> will have many
+- Javascript class or fuction that optionally accepts inputs -> returns react element that describes section of UI
+- 

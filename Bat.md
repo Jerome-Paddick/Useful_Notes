@@ -1,8 +1,11 @@
-@Echo Off
+BAT
+===
 
-:: %cd% 	-> current working directory
-:: %~dp0 	-> directory of the bat file
-:: "%~dp0Txt.txt"
+`@Echo Off`
+
+- `%cd%` 	-> current working directory  
+- `%~dp0 `	-> directory of the bat file
+- `"%~dp0Txt.txt"`
 
 :: If no files passed to bat
 if %1.==. (

@@ -1,6 +1,5 @@
 Code Commit Repos
 ===
----
 #### Contents
 
 1. [ctp-switch-agent-1](#ctp-switch-agent-1)

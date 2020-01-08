@@ -1,5 +1,4 @@
 Virtual Environments
-
 ===
 
 ### Venv/Virtualenv

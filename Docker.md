@@ -25,12 +25,22 @@ List Containsers -> `docker ps`
 - size `-s`
 - latest `-l`
 - all (even stopped) `-a`
+- Logs Container -> `docker logs -f [ID]`
+- Kill Container -> `docker kill [ID]`
+- Start Container -> `docker start [ID]`
+- Stop Container -> `docker stop [ID]`
+- Remove Container -> `docker rm [ID]`
 
-Kill Container -> `docker kill [ID]`
 
-Start Container -> `docker start [ID]`
+Containers can exist in following states, during which the container name can't be used for another container:
 
-Stop Container -> `docker stop [ID]`
+- created
+- restarting
+- running
+- paused
+- exited
+- dead
+
 
 ---
 

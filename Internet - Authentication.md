@@ -6,6 +6,7 @@ AUTHENTICATION
 - if stored in cookie, authentication-id will be sent with each request in `cookie` header
 - Because of mulitple servers serving website, needs sessions to be sticky to specific server or shared session cache server
 
+---
  ### JWT 
 
     JSON WEB TOKEN

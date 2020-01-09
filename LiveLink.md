@@ -31,6 +31,7 @@ Frontend application -> Paired with    [ctp-switch-app-1](#ctp-switch-app-1)
 * Vue
 * [Ansible](#Ansible)
 
+---
 #### Run
 1. cd to root dir
 2. `npm install`
@@ -50,6 +51,7 @@ Ansible -> Deploy AWS
 * [Ansible](#Ansible)
 * Django
 
+---
 ### Quickstart
 1. docker-compose up
 2. 
@@ -72,14 +74,13 @@ Compose
 
 ---
 
-
 ### Glossary
 
 <a name="Ansible"></a>
 ### 	 ~ANSIBLE~
 * App deployment automation
 
-
+---
 #### pika
 - py implementation of AMQP0-9-1 protocol
 - [docs](https://pika.readthedocs.io/en/stable/https://pika.readthedocs.io/en/stable/)

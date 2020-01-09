@@ -15,11 +15,11 @@ Terminal
 `man bash`
 
 Show ram/CPU status
-top
+`top`
 
-export 	-> exports var or func of all child processes in current shell
-source 	-> loads any function file into current shell 
-. 	-> loads commands from filename into new shell
+`export` 	-> exports var or func of all child processes in current shell  
+`source` 	-> loads any function file into current shell   
+`.` 	-> loads commands from filename into new shell
 
 check permissions home 
 ll
@@ -31,7 +31,7 @@ install application
 `sudo apt install [name]`
 
 open terminal as root
-sudo  gnome-terminal
+`sudo gnome-terminal`
 
 autocomplete command
 [tab]

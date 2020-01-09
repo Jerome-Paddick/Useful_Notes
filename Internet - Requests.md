@@ -9,6 +9,8 @@ Internet Requests
 - Browsers restrict cross-origin HTTP requests from scripts, if resource does not explicitly allow resource to be shared with header `"Access-Control-Allow-Origin"`
 - eg. frontend JS from `domain-a` asks uses Resource XMLHttpRequest to request `domain-b/data.json`, access is disallowed unless `domain-b` has an access header
 
+---
+
 ### CORS Preflight Request
 
 Happens when you try to send a complex request   

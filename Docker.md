@@ -48,6 +48,7 @@ Containers can exist in following states, during which the container name can't 
 
 - Tool for defining and running multi-container apps
 - YAML configured
+- `.env` file contains configuration info as well
 
 ---
 

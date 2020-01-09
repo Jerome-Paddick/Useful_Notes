@@ -1,14 +1,19 @@
 SSH
+===
 
-OPEN SSH TUNNEL
+### OPEN SSH TUNNEL
 
- ssh -f hq01.cv -L 12306:db.cricviz.com:2306 -N
+`-L` local port forwarding - open as local user on remote system
 
-SSH
+    ssh -L [local_port]:[remote_address]:[remote_port] [username@server.com]
 
-ssh jeromepaddick@hq01.cricviz.com -p 2022
-graphical
-ssh -X 
+
+---
+### Basic Use
+
+    ssh [USER] -p [port]
+    graphical
+    ssh -X 
 
 to find ip of machine 
 ap a
@@ -16,12 +21,11 @@ over internet
 https://ifconfig.co/ip
 
 access this machine
-
-sudo systemctl stop ssh
-sudo systemctl start ssh
-
+    
+    sudo systemctl stop ssh
+    sudo systemctl start ssh
 
 diable/enable on start 
 
-sudo systemctl disable ssh
-sudo systemctl enable ssh
+    sudo systemctl disable ssh
+    sudo systemctl enable ssh

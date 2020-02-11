@@ -1,0 +1,6 @@
+Vagrant
+===
+
+    Virtual Machine configuration
+    
+ 

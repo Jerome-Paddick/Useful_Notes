@@ -1,6 +1,11 @@
 GIT
 ===
 
+### Emergency F-up
+
+    git reflog
+
+
 cd /path/to/your/existing/code
 
     git init 

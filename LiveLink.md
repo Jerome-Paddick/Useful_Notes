@@ -2,27 +2,79 @@ Code Commit Repos
 ===
 #### Contents
 
-1. [ctp-switch-agent-1](#ctp-switch-agent-1)
 2. [ctp-switch-app-2](#ctp-switch-app-2)
 3. [ctp-switch-app-1](#ctp-switch-app-1)
-4. [ctp-mts-dd]()
-5. [ctp-sts-vtiger-1](#ctp-sts-vtiger-1)
-6. [ctp-livelink-recordingapp-2](#ctp-livelink-recordingapp-2)
-7. [ctp-livelink-iosapp1](#ctp-livelink-iosapp1)
-8. [ctp-livelink-integration-zixi-2](#ctp-livelink-integration-zixi-2)
-9. [ctp-livelink-integration-zixi-1](#ctp-livelink-integration-zixi-1)
-10. [ctp-livelink-recordingapp-1](#ctp-livelink-recordingapp-1)
 
 ---
-#### ctp-switch-agent-1
 
-Python Modules
-* [pika](#pika) = “~=1.1.0”
-* requests = “*”
-* [pytz](#pytz) = “*”
-* [influxdb](#pytz) = “*”
-* [boto3](#boto3) = “*”
-* [python-dotenv](#dotenv) = “*”
+### Create new Page
+
+#### ctp-2
+1. src/views  
+-> create new folder [page]  
+-> 2 files:  
+    1st file: `[page.vue]`
+        
+        <style lang="scss" scoped>
+            @import '@/assets/auth.scss';
+        </style>
+        <template>
+            [code]
+        <template>
+            <script lang="ts" src="./[page].ts" />            
+    2nd file: `[page.ts]`
+        
+        import { Component, Vue, Watch } from 'vue-property-decorator';
+        import { [MODEL] } from '@store/[MODEL]/model
+        
+        import { NS_[NAMESPACE] } from '@store/[ASDF]/types
+        const AsdfModule = namespace(NS_[NAMESPACE])
+        
+        const 
+        
+        export default class [PageView] extends Vue {
+            protected [page-const]: [type] = [val];
+            
+            protected [page-func](){
+                return [return]
+            }
+            
+        };    
+        
+2. /router.ts
+
+        import [PageView] from './views/[Pageview]/[PAGE].vue'
+        
+        const router = new Router({
+          mode: 'history',
+          base: process.env.BASE_URL,
+          linkActiveClass: 'active',
+          routes: [{
+              path: '[PAGE]',
+              name: [PAGE],
+              component: [Pageview],
+              meta: { requiresAuth: true }
+           },]
+        
+---
+
+### Create New MODEL
+
+#### ctp-2
+
+1. src/store  
+    -> create new dir [model]
+    
+        |[model]
+        |- actions.ts
+        |- getters.ts
+        |- index.ts
+        |- models.ts
+        |- mutations.ts
+        |- types.ts
+    
+    
+
 
 ---
 
@@ -128,3 +180,15 @@ Broker delivers messages to consumers subscribed to queues or consumer can fetch
 #### EC2
 - *ELASTIC CLOUD COMPUTE*
 - resizable capacity computing instance
+
+
+===
+
+    class OrganisationSourceInvitation(models.Model):
+        id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+        source_organisation = models.ForeignKey(Organisation, on_delete=models.CASCADE)
+        destination_organisation = models.ForeignKey(Organisation, on_delete=models.CASCADE)
+        destination_temporary_name = models.CharField(max_length=30)
+        user = models.ForeignKey(User, on_delete=models.CASCADE)
+        created_on = models.DateTimeField(auto_now_add=True)
+        registered = models.BooleanField(default=False)

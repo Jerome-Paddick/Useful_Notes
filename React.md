@@ -6,6 +6,15 @@ REACT
 code in src/App.js
 
 ---
+###DOM
+
+    Document Object Model
+    
+- Data representation of the objects that comprise the structure and content of of a document
+- 
+
+
+---
 ### ELEMENTS
 
 - what you want to appear on screen
@@ -90,3 +99,21 @@ code in src/App.js
   	}
   	
 - automatically escapes user input
+
+---
+### REDUX 
+
+State manager for React
+
+To change state, you must `dispatch` an `action`
+
+    { type: 'ADD_TODO', text: 'Go to swimming pool' }
+    { type: 'TOGGLE_TODO', index: 1 }
+    { type: 'SET_VISIBILITY_FILTER', filter: 'SHOW_ALL' }
+
+#### Reducer
+
+Function  
+-> takes state and action  
+--> Returns next State  
+    

@@ -1,15 +1,25 @@
 FLASK
 ===
 
-### CVAPI 
+### ALEMBIC
 
-`source VirtualEnvs/cvapi/bin/activate`
+    db = SQLlchemy()
+    db.init_app(app)
+    from flask_migrate import Migrate
+    migrate = Migrate(app, db)
 
+we can now use flask db `<command>` as alembic commands
+
+    flask db migrate -> create migration file from models
+    flask db upgrade -> migrate from current head to new head
+    flask db downgrade -> downgrade from current head 
+    flask db stamp head -> here is now the head
+---
 
 ### GENERAL
 
 Flask Templates
-"Ginger" Framework
+jinja Framework
 
 All Flask apps create an "Application Instance" -> an object to which all requests are sent for handling using WSGI (Web Server Gateway Interface) protocol
 

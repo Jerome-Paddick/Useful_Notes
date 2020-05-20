@@ -28,6 +28,8 @@ Tags:
 - useful for commonly queried metadata
 
 Measurement
+        
+           '<Measurement String>,<tags,> <fields,> <timestamp>' 
 - Strings
 - Acts as container for time, fields and tags columns
 - Conceptually similar to SQL table
